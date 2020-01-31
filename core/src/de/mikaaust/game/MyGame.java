@@ -56,7 +56,7 @@ public class MyGame extends ApplicationAdapter {
 	 */
 	public void create () {
 		batch = new SpriteBatch();
-		background = new Texture("bg.png");
+		background = new Texture("bgv2.png");
 		man = new Texture[7];
 		man[0] = new Texture("muskmoving1.png");
 		man[1] = new Texture("muskmoving2.png");
@@ -67,7 +67,7 @@ public class MyGame extends ApplicationAdapter {
 		man[6] = new Texture("muskmoving7.png");
 		dizzy = new Texture("dizzy1.png");
 		random = new Random();
-		coin = new Texture("coin.png");
+		coin = new Texture("money.png");
 		bomb = new Texture("bomb.png");
 		manY = Gdx.graphics.getHeight()/2;
 		font = new BitmapFont();
