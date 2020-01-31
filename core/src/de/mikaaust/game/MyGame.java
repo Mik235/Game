@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 /**
- * Eine Game App mit Elon Musk
+ * Eine Game App mit Elon Musk in einem Model 3
  *
  *
  * @author Mika Aust
@@ -74,11 +74,19 @@ public class MyGame extends ApplicationAdapter {
 		font.setColor(Color.WHITE);
 		font.getData().setScale(10);
 	}
+
+    /**
+     * Erstellung der Coins
+     */
 	public void createCoin(){
 		float height = random.nextFloat() * Gdx.graphics.getHeight();
 		coinYs.add((int) height);
 		coinXs.add(Gdx.graphics.getWidth());
 	}
+
+    /**
+     * Erstellung der Bomben
+     */
 	public void createBomb(){
 		float height = random.nextFloat() * Gdx.graphics.getHeight();
 		bombYs.add((int) height);
@@ -97,7 +105,7 @@ public class MyGame extends ApplicationAdapter {
 		}
 		else if(gamestate == 1) {
 
-			if (coinCount < 50) {
+			if (coinCount < 75) {
 				coinCount++;
 			} else {
 				coinCount = 0;
@@ -109,7 +117,7 @@ public class MyGame extends ApplicationAdapter {
 				coinXs.set(i, coinXs.get(i) - 4);
 				coinRectangles.add(new Rectangle(coinXs.get(i), coinYs.get(i), coin.getWidth(), coin.getHeight()));
 			}
-			if (bombCount < 250) {
+			if (bombCount < 300) {
 				bombCount++;
 			} else {
 				bombCount = 0;
