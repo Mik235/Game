@@ -13,7 +13,19 @@ import com.badlogic.gdx.math.Rectangle;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * Eine Game App mit Elon Musk
+ *
+ *
+ * @author Mika Aust
+ * @version 1.0.0
+ *
+ *
+ */
 public class MyGame extends ApplicationAdapter {
+	/**
+	 * @param args Definition alle Variablen
+	 */
 	SpriteBatch batch;
 	Texture background;
 	Texture [] man;
@@ -39,6 +51,9 @@ public class MyGame extends ApplicationAdapter {
 	int bombCount;
 	Rectangle manRectangle;
 	@Override
+	/**
+	 * Definition der Bilder etc.
+	 */
 	public void create () {
 		batch = new SpriteBatch();
 		background = new Texture("bg.png");
